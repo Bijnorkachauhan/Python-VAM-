@@ -1,0 +1,49 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x=np.array([1,7,8,11,9,3,2,4])
+print("The mean is ",x.mean())
+print("The maximum is ",x.max())
+print("The minimum is ",x.min())
+# x.sort()
+# print(x)
+
+for i in x: 
+  print(i)
+  
+print(x[-6:-2])     #Array slicing
+
+#shape or Reshape
+
+#print(x.shape)
+#)
+
+y=np.array([3,1,7,9,2,11,8,10])
+z=x+y
+
+print(z)
+
+
+#Import pandas as pd
+
+# x = np.array([1,2,3,4])
+# mydataframe = pd.DataFrame(x)
+# print(mydataframe)
+
+mydata = pd.DataFrame(data=np.arange(0,100).reshape(10,10))
+
+print(mydata.head())
+
+
+empsalary = pd.DataFrame(data=np.arange(0,100).reshape(10,10))
+
+# print(empsalary+1000)
+# print(mydata.describe())
+
+# print(mydata.mean())
+# print(mydata.median())
+# print(mydata.mode())
+
+#loc function
+print(empsalary.loc[[0,3]])
